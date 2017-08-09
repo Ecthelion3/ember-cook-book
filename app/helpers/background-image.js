@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
-export function backgroundImage(params/*, hash*/) {
-  return params;
-}
-
-export default Ember.Helper.helper(backgroundImage);
+export default Ember.Helper.helper(function(params) {
+  let url = params[0];
+  var escaped_css = "background-image: url(" + url +");".htmlSafe();
+  return Ember.String.htmlSafe(escaped_css);
+});
