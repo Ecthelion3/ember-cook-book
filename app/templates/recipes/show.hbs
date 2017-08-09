@@ -5,4 +5,11 @@
         <dd>{{ingredient.description}}</dd>
       {{/each}}
     </dl>
+    <h3>Instructions</h3>
+    <dl class="dl-horizontal">
+      {{#each model.instructions as |instruction index|}}
+        <dt>{{index}}</dt>
+        <dd>{{instruction.description}}</dd>
+      {{/each}}
+    </dl>
 {{/recipe-listing}}
