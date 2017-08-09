@@ -1,6 +1,7 @@
 {{#each model as |recipe|}}
   <article class="listing">
     <h3>{{recipe.title}}</h3>
+    <div class="recipe-image" style="background-image: url('{{recipe.image}}');" ></div>
     <p>
       {{recipe.description}}
     </p>
